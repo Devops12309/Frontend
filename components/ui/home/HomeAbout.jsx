@@ -26,7 +26,7 @@ const HomeAbout = () => {
                   <h2>Get to know Hadi</h2>
                 </div>
                 <p>
-                  Meet our mascot, Qasim. Talha is your digital leader and will lead you through specially structured computer short courses that will not only enhance your IT skills
+                  Meet our students, Qasim. Talha is your digital leader and will lead you through specially structured computer short courses that will not only enhance your IT skills
                   but will also help you navigate efficiency through your career path.
                   <br />
                   {/* </p>
