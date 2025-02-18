@@ -1,0 +1,23 @@
+name: Build and Restart Frontend
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Build_and_Restart:
+    runs-on: ubuntu-latest
+    environment: Production
+    steps:
+      - name: Execute remote SSH commands to build and restart PM2 Frontend
+        uses: appleboy/ssh-action@master
+        with:
+          host: 156.67.80.49
+          username: root
+          key: ${{ secrets.SSH_KEY }}
+          port: 22
+          script: |
+            cd /root/frontend
+            git pull
+            npm install -f
+            npm run build
+            pm2 restart Frontend
